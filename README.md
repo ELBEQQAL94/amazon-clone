@@ -19,8 +19,7 @@
 * [x] Deploy application on vercel
 * [ ] Context API
 * [ ] Firebase (Authentication + database)
-* [ ] React Router
-* [ ] 
+* [x] React Router
 
 ## API's
 ----
@@ -30,7 +29,7 @@
 ----
 
 * Vercel
-*Live demo: 
+* Live demo: https://amazon-clone-mu.vercel.app/
 
 ## Test Components
 ----

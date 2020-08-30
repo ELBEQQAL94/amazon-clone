@@ -10,16 +10,12 @@ import {
   Footer,
 } from './components';
 
+// Routers
+import Routers from './Routers';
 
 // Styles
 import "./App.scss";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Amazon Clone!</h1>
-    </div>
-  );
-}
+const App = () => <Routers />;
 
 export default App;
