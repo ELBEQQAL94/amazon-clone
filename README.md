@@ -20,6 +20,8 @@
 * [ ] Context API
 * [ ] Firebase (Authentication + database)
 * [x] React Router
+* [ ] Add Navbar
+* [ ] Add favicon
 
 ## API's
 ----
