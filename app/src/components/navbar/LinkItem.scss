@@ -1,0 +1,31 @@
+@import "../../App.scss";
+
+.nav__link {
+  color: $white;
+  text-decoration: none;
+  .nav__options {
+    display: flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    flex-direction: column;
+    text-transform: capitalize;
+    .nav__option--one {
+      font-size: 10px;
+      color: $light;
+    }
+    .nav__option--two {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+}
+
+// Media Queries
+@media (max-width: #{$bp-xsmall}) {
+  .nav__option--one {
+    font-size: 8px !important;
+  }
+  .nav__option--two {
+    font-size: 7px !important;
+  }
+}
