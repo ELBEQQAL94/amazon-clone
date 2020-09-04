@@ -45,7 +45,7 @@
 
 
 // Media Queries
-@media (max-width: #{$bp-small}) {
+@media (max-width: #{$bp-xsmall}) {
   .search__box {
     display: none;
   }

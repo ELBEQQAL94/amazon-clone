@@ -13,7 +13,7 @@
 }
 
 // Media Queries
-@media (max-width: #{$bp-small}) {
+@media (max-width: #{$bp-xsmall}) {
   img {
     width: 60px !important;
     object-fit: contain;

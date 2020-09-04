@@ -26,7 +26,7 @@
 }
 
 // Media Queries
-@media (max-width: #{$bp-small}) {
+@media (max-width: #{$bp-xsmall}) {
   .basket__container--icon {
     .MuiSvgIcon-root {
       font-size: 2em !important;

@@ -15,7 +15,7 @@
 }
 
 // Media Queries
-@media (max-width: #{$bp-small}) {
+@media (max-width: #{$bp-xsmall}) {
   .header {
     padding: 10px;
     .search__box--mobile {

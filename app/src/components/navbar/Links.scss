@@ -25,7 +25,7 @@
 }
 
 // Media Queries
-@media (max-width: #{$bp-small}) {
+@media (max-width: #{$bp-xsmall}) {
   .nav__options--one {
     font-size: 8px !important;
   }
