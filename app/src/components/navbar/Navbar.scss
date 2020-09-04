@@ -1,0 +1,29 @@
+@import "../../App.scss";
+
+.header {
+  background: $primary;
+  padding: 5px 0;
+  .header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $white;
+  }
+  .search__box--mobile {
+    display: none;
+  }
+}
+
+// Media Queries
+@media (max-width: #{$bp-small}) {
+  .header {
+    padding: 10px;
+    .search__box--mobile {
+      margin-top: 1.2em;
+      display: block !important;
+      .search__box {
+        display: block;
+      }
+    }
+  }
+}

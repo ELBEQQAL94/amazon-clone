@@ -1,10 +1,28 @@
 import React from 'react';
 
+// Components
+import LogoContainer from './LogoContainer';
+import SearchBox from './SearchBox';
+import Links from './Links';
+import BasketIcon from './BasketIcon';
+
+// Style
+import "./Navbar.scss";
+
 const Navbar = () => {
   return (
-    <nav className="nav">
-      <h1>Navbar</h1>
-    </nav>
+    <header className="header">
+      <div className="header__container">
+        <LogoContainer />
+        <SearchBox />
+        <Links />
+        <BasketIcon />
+      </div>
+      {/* Search box for mobile */}
+      <div className="search__box--mobile">
+        <SearchBox />
+      </div>
+    </header>
   );
 };
 

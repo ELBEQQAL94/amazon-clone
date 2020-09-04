@@ -1,0 +1,21 @@
+@import "../../App.scss";
+
+.logo__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 10px;
+  img {
+    width: 100px;
+    object-fit: contain;
+  }
+}
+
+// Media Queries
+@media (max-width: #{$bp-small}) {
+  img {
+    width: 60px !important;
+    object-fit: contain;
+  }
+}

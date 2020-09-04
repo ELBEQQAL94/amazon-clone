@@ -1,0 +1,52 @@
+@import "../../App.scss";
+
+.search__box {
+  background: $white;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: box-shadow 0.5s ease-in-out;
+  flex: 1;
+  height: 45px;
+  form {
+    input {
+      padding: 10px;
+      border: none;
+      outline: none;
+      background: transparent;
+    }
+    button {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      border: none;
+      outline: none;
+      background: $amazon-color;
+      padding: 15px 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.5s linear;
+      cursor: pointer;
+      .MuiSvgIcon-root {
+        font-size: 2.3em;
+        font-weight: bold;
+      }
+      &:hover {
+        background-color: $amazon-color;
+      }
+    }
+  }
+  &:hover {
+    box-shadow: 0 0 7px $amazon-color;
+  }
+}
+
+
+// Media Queries
+@media (max-width: #{$bp-small}) {
+  .search__box {
+    display: none;
+  }
+}
