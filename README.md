@@ -22,10 +22,9 @@
 * [x] React Router
 * [x] Add Navbar
 * [x] Add favicon
-* [ ] Add Banner
+* [x] Add Banner
 * [ ] Fix background image size on small screen
-* [ ] Add Row and RowItem
-* [ ] Add style for productItem.scss
+* [x] Add Row and RowItem
 
 ## API's
 ----

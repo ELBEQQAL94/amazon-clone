@@ -1,0 +1,28 @@
+@import"../../App.scss";
+
+/* Row Section */
+.row__posters {
+  -ms-overflow-style: none; // IE, Edge
+  scrollbar-width: none; // Firefox
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  .row__poster {
+    object-fit: contain;
+    width: 100% !important;
+    max-height: 250px;
+    height: 250px;
+    margin-right: 10px;
+    transition: transform 450ms linear;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.08);
+    }
+  }
+    // hide scroll bar on Chrome, Safari, and Opera
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

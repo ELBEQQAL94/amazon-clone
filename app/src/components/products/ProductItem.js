@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 // prop types
 import PropTypes from 'prop-types';
 
+// Style
+import "./ProductItem.scss";
+
 const ProductItem = ({ items }) => {
 
   const [loadImag, setLoadImag] = useState(false);
