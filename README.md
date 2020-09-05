@@ -25,6 +25,7 @@
 * [x] Add Banner
 * [ ] Fix background image size on small screen
 * [x] Add Row and RowItem
+* [ ] Add Products Card
 
 ## API's
 ----

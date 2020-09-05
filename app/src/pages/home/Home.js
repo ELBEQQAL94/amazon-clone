@@ -4,7 +4,7 @@ import React from 'react';
 import {requests} from '../../services';
 
 // Components
-import { Banner, Products } from '../../components';
+import { Banner, Products, ProductsCard } from '../../components';
 
 // Style
 import "./Home.scss";
@@ -25,6 +25,7 @@ const Home = () => {
         title="Amazon Top Sellers"
         items={requests.amazonTopSeller}
       />
+      <ProductsCard />
     </div>
   );
 };

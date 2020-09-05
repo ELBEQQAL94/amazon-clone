@@ -7,7 +7,6 @@ import Products from '../products/Products';
 // Services
 import {requests} from '../../services';
 
-
 // Style
 import "./Banner.scss";
 
