@@ -1,9 +1,7 @@
 import instance from './instance';
-import request from './requests';
-import baseImgUrl from './baseImgUrl';
+import requests from './requests';
 
 export {
   instance,
-  request,
-  baseImgUrl,
+  requests,
 };
