@@ -9,17 +9,19 @@ import {
 import { Navbar } from './components';
 
 // Pages
+import { Home } from './pages';
 
 const Routers = () => {
   return (
     <Router>
       <div className="App">
-        <Navbar />
         <Switch>
         <Route exact path='/'>
-            <h1>Amazon clone!</h1>
+            <Navbar />
+            <Home />
           </Route>
           <Route path='/checkout'>
+            <Navbar />
             <h1>Check Out!</h1>
           </Route>
           <Route path='/login'>

@@ -20,8 +20,12 @@
 * [ ] Context API
 * [ ] Firebase (Authentication + database)
 * [x] React Router
-* [ ] Add Navbar
-* [ ] Add favicon
+* [x] Add Navbar
+* [x] Add favicon
+* [ ] Add Banner
+* [ ] Fix background image size on small screen
+* [ ] Add Row and RowItem
+* [ ] Add style for productItem.scss
 
 ## API's
 ----

@@ -16,7 +16,7 @@
         color: orange;
       }
       .MuiSvgIcon-root {
-        font-size: 3em;
+        font-size: 2em;
       }
     }
     .cart {
@@ -33,7 +33,7 @@
 @media (max-width: #{$bp-xsmall}) {
   .basket__container--icon {
     .MuiSvgIcon-root {
-      font-size: 2em !important;
+      font-size: 1.5em !important;
     }
   }
   .cart {
