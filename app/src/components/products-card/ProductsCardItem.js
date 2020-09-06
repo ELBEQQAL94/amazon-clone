@@ -3,6 +3,12 @@ import React from 'react';
 // Material UI Icons
 import StarIcon from '@material-ui/icons/Star';
 
+// Data Layer
+import { useStateValue } from '../../store/StateProvider';
+
+// Action Type
+import { ADD_TO_CART } from '../../store/types';
+
 // Components
 import { Button } from '../elements';
 
@@ -19,6 +25,23 @@ const ProductsCardItem = ({
   rating,
   price,
 }) => {
+
+  const [{cart}, dispatch] = useStateValue();
+
+  // add to cart
+  const addToCart = () => {
+    dispatch({
+      type: ADD_TO_CART,
+      item: {
+        id,
+        title,
+        image,
+        rating,
+        price,
+      },
+    });
+  };
+
   return (
     <div className="products__card__item">
       <img
@@ -32,8 +55,8 @@ const ProductsCardItem = ({
         {
           Array(rating)
           .fill()
-          .map((_) => (
-            <StarIcon />
+          .map((_, i) => (
+            <StarIcon key={i}/>
           ))
         }
       </div>
@@ -41,13 +64,13 @@ const ProductsCardItem = ({
         <small>$</small>
         <strong>{price}</strong>
       </p>
-      <Button />
+      <Button addToCart={addToCart}/>
     </div>
   );
 };
 
 ProductsCardItem.propTypes = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,

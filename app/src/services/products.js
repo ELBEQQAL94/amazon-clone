@@ -25,7 +25,7 @@ const products = [
     title: 'Pacinoble Mens Long Sleeve Fashion Luxury Design Print Dress Shirt',
     price: 27.99,
     image: 'https://m.media-amazon.com/images/I/81Ic0ikcw0L._AC_UL320_.jpg',
-    rating: 2.5,
+    rating: 2,
   },
   {
     id: 5,
@@ -46,7 +46,7 @@ const products = [
     title: 'Alienware Low-Profile RGB Gaming Keyboard AW510K: Alienfx',
     price: 104.99,
     image: 'https://images-na.ssl-images-amazon.com/images/I/41c8WMaDzAL._AC_SR400,600_.jpg',
-    rating: 4.5,
+    rating: 4,
   },
   {
     id: 8,
@@ -58,7 +58,7 @@ const products = [
   {
     id: 9,
     title: 'Dell G5 Gaming Desktop, Intel Core i7- 9700, NVIDIA GeForce GTX',
-    price: '849.99',
+    price: 849.99,
     image: 'https://images-na.ssl-images-amazon.com/images/I/41ArK2B01eL._AC_SR400,600_.jpg',
     rating: 3,
   },

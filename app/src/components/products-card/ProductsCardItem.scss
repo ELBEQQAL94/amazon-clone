@@ -6,9 +6,11 @@
   width: 300px;
   margin-left: 1em;
   margin-bottom: 2em;
+  min-height: 400px;
   transition: box-shadow 0.5s linear;
   padding: 7px;
   cursor: pointer;
+  background-color: $white;
   &:hover {
     box-shadow: 7px 7px 10px gray;
   }
@@ -19,7 +21,8 @@
     margin-bottom: 15px;
   }
   .product__title {
-    margin-bottom: 10px;
+    margin-bottom: 2em;
+    height: 100px;
   }
   .product__rating {
     color: yellow;
