@@ -17,7 +17,7 @@
 * [x] Create components folder
 * [x] Add prop types
 * [x] Deploy application on vercel
-* [ ] Context API
+* [x] Context API
 * [ ] Firebase (Authentication + database)
 * [x] React Router
 * [x] Add Navbar
