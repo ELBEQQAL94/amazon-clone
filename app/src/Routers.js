@@ -9,20 +9,20 @@ import {
 import { Navbar } from './components';
 
 // Pages
-import { Home } from './pages';
+import { Home, Checkout } from './pages';
 
 const Routers = () => {
   return (
     <Router>
       <div className="App">
         <Switch>
-        <Route exact path='/'>
+          <Route exact path='/'>
             <Navbar />
             <Home />
           </Route>
           <Route path='/checkout'>
             <Navbar />
-            <h1>Check Out!</h1>
+            <Checkout />
           </Route>
           <Route path='/login'>
             <h1>Login!</h1>

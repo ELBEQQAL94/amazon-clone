@@ -1,0 +1,11 @@
+@import "../../App.scss";
+
+.checkout {
+  hr {
+    color: $amazon-color;
+  }
+  padding-top: 2em;
+  .checkout__title {
+    margin-bottom: 2em;
+  }
+}

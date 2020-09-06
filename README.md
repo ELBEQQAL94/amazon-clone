@@ -26,6 +26,10 @@
 * [ ] Fix background image size on small screen
 * [x] Add Row and RowItem
 * [x] Add Products To Card
+* [x] Add Checkout
+* [ ] Add login
+* [ ] Add Subtotal box
+* [ ] Add Basket on the bottom of the page (check material ui components)
 
 ## API's
 ----

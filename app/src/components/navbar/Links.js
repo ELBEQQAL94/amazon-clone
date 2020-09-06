@@ -22,7 +22,7 @@ const Links = () => {
       />
 
       <LinkItem
-        path="/login"
+        path="/checkout"
         optionOne="your"
         optionTwo="prime"
       />

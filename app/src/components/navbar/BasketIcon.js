@@ -14,8 +14,6 @@ const BasketIcon = () => {
 
   const [{cart}] = useStateValue();
 
-  console.log('cart: ', cart);
-
   return (
     <Link to="/checkout" className="basket">
       <div className="basket__container">

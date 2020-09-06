@@ -1,0 +1,12 @@
+.checkout__product {
+  display: flex;
+  padding-top: 2em;
+  .checkout__product--img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+  }
+  .checkout__product--info {
+    padding-left: 1em;
+  }
+}
