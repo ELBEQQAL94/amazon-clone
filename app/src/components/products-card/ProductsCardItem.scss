@@ -1,0 +1,35 @@
+@import "../../App.scss";
+
+.products__card__item {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-left: 1em;
+  margin-bottom: 2em;
+  transition: box-shadow 0.5s linear;
+  padding: 7px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 7px 7px 10px gray;
+  }
+  .products__card__item--img {
+    width: 100% !important;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+  }
+  .product__title {
+    margin-bottom: 10px;
+  }
+  .product__rating {
+    color: yellow;
+    margin-bottom: 10px;
+  }
+  .product__price {
+    margin-bottom: 10px;
+    strong {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+}
