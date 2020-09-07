@@ -28,7 +28,7 @@
 * [x] Add Products To Card
 * [x] Add Checkout
 * [ ] Add login
-* [ ] Add Subtotal box
+* [x] Add Subtotal box
 * [ ] Add Basket on the bottom of the page (check material ui components)
 
 ## API's

@@ -5,6 +5,7 @@ import { useStateValue } from '../../store/StateProvider';
 
 // Components
 import CheckoutProduct from './CheckoutProduct';
+import { Subtotal } from '../../components';
 
 // Style
 import "./Checkout.scss";
@@ -44,6 +45,8 @@ const Checkout = () => {
           </>
         ): (renderItemsInCart())
       }
+      <hr />
+      <Subtotal />
     </div>
   );
 };
