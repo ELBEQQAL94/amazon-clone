@@ -1,17 +1,9 @@
 // Actions Types
-import { ADD_TO_CART, REMOVE_FROM_CART } from './types';
+import { ADD_TO_CART, REMOVE_FROM_CART, SET_USER } from './types';
 
 export const initialState = {
-  cart: [
-    {
-      id: 9,
-      title: 'Dell G5 Gaming Desktop, Intel Core i7- 9700, NVIDIA GeForce GTX',
-      price: 849.99,
-      image: 'https://images-na.ssl-images-amazon.com/images/I/41ArK2B01eL._AC_SR400,600_.jpg',
-      rating: 3,
-    },
-  ],
-  //user: null,
+  cart: [],
+  user: null,
 };
 
 export const getTotalPrice = (cart) => {
@@ -21,6 +13,10 @@ export const getTotalPrice = (cart) => {
 export default function reducer(state, action){
   console.log('action: ', action);
   switch(action.type) {
+    case SET_USER: return {
+      ...state,
+      user: action.user,
+    };
     case ADD_TO_CART:
       return {
         ...state,

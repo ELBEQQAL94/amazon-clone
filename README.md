@@ -27,7 +27,8 @@
 * [x] Add Row and RowItem
 * [x] Add Products To Card
 * [x] Add Checkout
-* [ ] Add login
+* [x] Add login
+* [x] Add logout
 * [x] Add Subtotal box
 * [ ] Add Basket on the bottom of the page (check material ui components)
 

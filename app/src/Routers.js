@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,10 +8,48 @@ import {
 // Components
 import { Navbar } from './components';
 
+// Auth
+import { Login } from './pages/auth';
+
 // Pages
 import { Home, Checkout } from './pages';
 
+// Data layer
+import { useStateValue } from './store/StateProvider';
+
+// Actions Types
+import { SET_USER } from './store/types';
+
+// Auhtentication with firebase
+import { auth } from './services/firebase';
+
 const Routers = () => {
+
+  const [{user}, dispatch] = useStateValue();
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((authUser) => {
+      if(authUser) {
+        dispatch({
+          type: SET_USER,
+          user: authUser,
+        });
+      } else {
+        dispatch({
+          type: SET_USER,
+          user: null,
+        });
+      }
+    });
+
+    return () => {
+      // cleanup
+      unsubscribe();
+    };
+  },[]);
+
+  console.log('user: ', user);
+
   return (
     <Router>
       <div className="App">
@@ -25,7 +63,7 @@ const Routers = () => {
             <Checkout />
           </Route>
           <Route path='/login'>
-            <h1>Login!</h1>
+            <Login />
           </Route>
         </Switch>
       </div>
