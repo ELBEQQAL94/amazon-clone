@@ -34,8 +34,8 @@
 * [ ] Add Footer
 * [ ] Redirect User if looged in
 * [ ] Add react flip move
-* [ ] Add name on navbar
-* [ ] Add create user
+* [x] Add name on navbar
+* [x] Add create user
 * [x] Display errors
 * [ ] Disabled button whene register or login
 

@@ -34,7 +34,10 @@ const Links = ({user}) => {
             optionTwo="sign in"
           />
         ) : (
-            <p className="logout" onClick={logout}>Sign Out</p>
+            <div className="nav__options" onClick={logout}>
+              <span className="nav__option--one">Hi, {user?.email.replace(/@[^@]+$/, '')}</span>
+              <span className="nav__option--two">Sign Out</span>
+            </div>
         )
       }
 
