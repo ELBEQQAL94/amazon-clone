@@ -48,8 +48,6 @@ const Routers = () => {
     };
   },[]);
 
-  console.log('user: ', user);
-
   return (
     <Router>
       <div className="App">

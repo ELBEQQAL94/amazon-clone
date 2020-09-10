@@ -1,5 +1,8 @@
 import React from 'react';
 
+// React Flip Move
+import FlipMove from 'react-flip-move';
+
 // Data layer
 import { useStateValue } from '../../store/StateProvider';
 
@@ -19,18 +22,20 @@ const Checkout = () => {
       <>
         <h2 className="checkout__title">Your Shopping Cart:</h2>
         <hr />
-        {
-          cart?.map(({ id, title, price, image, rating }) => (
-            <CheckoutProduct
-              key={id}
-              id={id}
-              title={title}
-              price={price}
-              image={image}
-              rating={rating}
-            />
-          ))
-        }
+        <FlipMove>
+          {
+            cart?.map(({ id, title, price, image, rating }) => (
+              <CheckoutProduct
+                key={id}
+                id={id}
+                title={title}
+                price={price}
+                image={image}
+                rating={rating}
+              />
+            ))
+          }
+        </FlipMove>
       </>
     );
   };
@@ -45,7 +50,6 @@ const Checkout = () => {
           </>
         ): (renderItemsInCart())
       }
-      <hr />
       <Subtotal />
     </div>
   );

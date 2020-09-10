@@ -33,7 +33,7 @@
 * [ ] Add Basket on the bottom of the page (check material ui components)
 * [ ] Add Footer
 * [ ] Redirect User if looged in
-* [ ] Add react flip move
+* [x] Add react flip move and add animation to checkout page
 * [x] Add name on navbar
 * [x] Add create user
 * [x] Display errors

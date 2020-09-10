@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 
 // Types
 import PropTypes from 'prop-types';
@@ -18,13 +18,13 @@ import { REMOVE_FROM_CART } from '../../store/types';
 // Style
 import "./CheckoutProduct.scss";
 
-const CheckoutProduct = ({
+const CheckoutProduct = forwardRef(({
   id,
   title,
   image,
   rating,
   price,
-}) => {
+}, ref) => {
 
   const [{cart}, dispatch] = useStateValue();
 
@@ -37,7 +37,7 @@ const CheckoutProduct = ({
   };
 
   return (
-    <div className="checkout__product">
+    <div className="checkout__product" ref={ref}>
       <img
         className="checkout__product--img"
         src={image}
@@ -52,7 +52,7 @@ const CheckoutProduct = ({
       </div>
     </div>
   )
-};
+});
 
 CheckoutProduct.propTypes = {
   id: PropTypes.number.isRequired,
