@@ -1,0 +1,9 @@
+@import "../../App.scss";
+
+.alert {
+  background-color: red;
+  width: 100%;
+  padding: 20px;
+  color: $white;
+  font-size: 18px;
+}

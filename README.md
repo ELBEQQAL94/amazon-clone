@@ -31,6 +31,13 @@
 * [x] Add logout
 * [x] Add Subtotal box
 * [ ] Add Basket on the bottom of the page (check material ui components)
+* [ ] Add Footer
+* [ ] Redirect User if looged in
+* [ ] Add react flip move
+* [ ] Add name on navbar
+* [ ] Add create user
+* [x] Display errors
+* [ ] Disabled button whene register or login
 
 ## API's
 ----

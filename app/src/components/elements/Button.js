@@ -3,7 +3,6 @@ import React from 'react';
 // prop types
 import PropTypes from 'prop-types';
 
-
 // Style
 import "./Button.scss";
 

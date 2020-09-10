@@ -7,6 +7,9 @@ import AmazonLogo from '../../../images/amazon_logo.jpeg';
 // authentication with firebase
 import { auth } from '../../../services/firebase';
 
+// Components
+import { Alert } from '../../../components/elements';
+
 // Style
 import './Login.scss';
 
@@ -15,16 +18,20 @@ const Login = () => {
   const history = useHistory();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState(false);
 
   // login
   const login = (e) => {
     e.preventDefault();
     auth.signInWithEmailAndPassword(email, password)
     .then((auth) => {
+      setError(false);
       history.push('/');
     })
     .catch(error => {
-      alert(error.message);
+      setError(true);
+      setMessage(error.message);
     });
   };
 
@@ -33,10 +40,12 @@ const Login = () => {
     e.preventDefault();
     auth.createUserWithEmailAndPassword(email, password)
     .then((auth) => {
+      setError(false);
       history.push('/');
     })
     .catch(error => {
-      alert(error.message);
+      setError(true);
+      setMessage(error.message);
     });
   };
 
@@ -51,6 +60,7 @@ const Login = () => {
         />
       </Link>
       <div className="login__container">
+        {error ? <Alert message={message} /> : null}
         <form>
           <h1 className="signin__title">sign in</h1>
           <h5 className="label__title">E-mail:</h5>
@@ -70,7 +80,7 @@ const Login = () => {
             required
           />
           <button onClick={login} type="submit" className="signin__button">
-            Submit
+            Login
           </button>
         </form>
         <p className="conditions">
