@@ -5,6 +5,10 @@ import {
   Route
 } from 'react-router-dom';
 
+// Stripe.js
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+
 // Components
 import { Navbar } from './components';
 
@@ -12,7 +16,7 @@ import { Navbar } from './components';
 import { Login } from './pages/auth';
 
 // Pages
-import { Home, Checkout } from './pages';
+import { Home, Checkout, Payment } from './pages';
 
 // Data layer
 import { useStateValue } from './store/StateProvider';
@@ -24,6 +28,10 @@ import { SET_USER } from './store/types';
 import { auth } from './services/firebase';
 
 const Routers = () => {
+
+  // Make sure to call `loadStripe` outside of a component’s render to avoid
+  // recreating the `Stripe` object on every render.
+  const stripePromise = loadStripe('pk_test_51HQu3HAxKZgiNj411WBQxIe4sse4dlNmapBtoH07KMwIpS5fkvNZ7VqH4b2MP0W6dlK9BNBHIiJ1SBk4jWuiGpm400x17eZyFU');
 
   const [{user}, dispatch] = useStateValue();
 
@@ -62,6 +70,12 @@ const Routers = () => {
           </Route>
           <Route path='/login'>
             <Login />
+          </Route>
+          <Route path='/payment'>
+            <Navbar />
+            <Elements stripe={stripePromise}>
+              <Payment />
+            </Elements>
           </Route>
         </Switch>
       </div>

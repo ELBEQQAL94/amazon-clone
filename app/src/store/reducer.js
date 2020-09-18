@@ -6,9 +6,15 @@ export const initialState = {
   user: null,
 };
 
+// Get Total Amout Of Your Items Price
 export const getTotalPrice = (cart) => {
   return cart?.reduce((amount, item) => amount += item.price, 0);
 };
+
+// Grep Name from user Email
+export const getNameFromEmailUser = (user) => {
+  return user?.email.replace(/@[^@]+$/, '');
+}
 
 export default function reducer(state, action){
   switch(action.type) {

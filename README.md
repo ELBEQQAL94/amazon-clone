@@ -31,13 +31,22 @@
 * [x] Add logout
 * [x] Add Subtotal box
 * [ ] Add Basket on the bottom of the page (check material ui components)
-* [ ] Add Footer
+* [ ] Add Footer as amazon footer
 * [ ] Redirect User if looged in
 * [x] Add react flip move and add animation to checkout page
 * [x] Add name on navbar
 * [x] Add create user
 * [x] Display errors
-* [ ] Disabled button whene register or login
+* [ ] show loading spinner when register or login
+* [ ] Add Paypal
+* [ ] Stripe Functionality
+* [ ] Checkout page (payment page)
+* [ ] Cloud function to process stripe peyment(serverless)
+* [ ] Firebase for real time database (firestore)
+* [ ] Add 404 page as amazon not found page!
+* [ ] If the user not authenticated redirect it to login/register page
+* [ ] Add Categories
+* [ ] Add search functionality
 
 ## API's
 ----

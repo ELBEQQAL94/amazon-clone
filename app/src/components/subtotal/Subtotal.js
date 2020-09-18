@@ -1,5 +1,8 @@
 import React from 'react';
 
+// history from react router dom
+import { useHistory } from 'react-router-dom';
+
 // React Currency Format
 import CurrencyFormat from 'react-currency-format';
 
@@ -22,9 +25,10 @@ import './Subtotal.scss';
 const Subtotal = () => {
 
   const [{cart}] = useStateValue();
+  const history = useHistory();
 
   const checkOut = () => {
-    console.log('checkout...')
+    history.push('/payment');
   };
 
   const renderItemsWithPrice = (value) => (
@@ -44,7 +48,7 @@ const Subtotal = () => {
         prefix={"$"}
       />
       <Button
-        title="Buy Now"
+        title="Checkout Order(s)"
         Icon={ShoppingBasketIcon}
         func={checkOut}
       />

@@ -4,6 +4,9 @@ import { useHistory } from 'react-router-dom';
 // Types
 import PropTypes from 'prop-types';
 
+// reducer
+import { getNameFromEmailUser } from '../../store/reducer';
+
 // Components
 import LinkItem from './LinkItem';
 
@@ -30,19 +33,19 @@ const Links = ({user}) => {
         user === null ? (
           <LinkItem
             path="/login"
-            optionOne="Hello"
+            optionOne="Hi, Guest"
             optionTwo="sign in"
           />
         ) : (
             <div className="nav__options" onClick={logout}>
-              <span className="nav__option--one">Hi, {user?.email.replace(/@[^@]+$/, '')}</span>
+              <span className="nav__option--one">Hi, {getNameFromEmailUser(user)}</span>
               <span className="nav__option--two">Sign Out</span>
             </div>
         )
       }
 
       <LinkItem
-        path="/login"
+        path="/payment"
         optionOne="returns"
         optionTwo="& orders"
       />
