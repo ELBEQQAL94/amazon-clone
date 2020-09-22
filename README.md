@@ -49,6 +49,7 @@
 * [ ] Add search functionality
 * [ ] Clear console errors
 * [ ] Create middleware error function that handle the errors comes from server.
+* [ ] Prevent repeated products added to user cart
 
 
 ## Deployement

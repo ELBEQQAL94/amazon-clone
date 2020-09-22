@@ -5,7 +5,9 @@ import './Orders.scss';
 
 const Orders = () => {
     return (
-        <h1>Orders!</h1>
+        <div className="orders">
+            <h1>your orders</h1>
+        </div>
     );
 };
 
