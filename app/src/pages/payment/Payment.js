@@ -74,6 +74,10 @@ const Payment = () => {
       setError(null);
       setProcessing(false);
 
+      dispatch({
+        type: "EMPTY_CART",
+      });
+
       // with replace you can't back to payment page after payment done!
       history.replace('/orders')
     })

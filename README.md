@@ -18,7 +18,7 @@
 * [x] Add prop types
 * [x] Deploy application on vercel
 * [x] Context API
-* [ ] Firebase (Authentication + database)
+* [x] Firebase (Authentication + database)
 * [x] React Router
 * [x] Add Navbar
 * [x] Add favicon
@@ -47,9 +47,8 @@
 * [ ] If the user not authenticated redirect it to login/register page
 * [ ] Add Categories
 * [ ] Add search functionality
-
-## API's
-----
+* [ ] Clear console errors
+* [ ] Create middleware error function that handle the errors comes from server.
 
 
 ## Deployement

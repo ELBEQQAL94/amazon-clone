@@ -16,7 +16,7 @@ import { Navbar } from './components';
 import { Login } from './pages/auth';
 
 // Pages
-import { Home, Checkout, Payment } from './pages';
+import { Home, Checkout, Payment, Orders } from './pages';
 
 // Data layer
 import { useStateValue } from './store/StateProvider';
@@ -76,6 +76,10 @@ const Routers = () => {
             <Elements stripe={stripePromise}>
               <Payment />
             </Elements>
+          </Route>
+          <Route path='/orders'>
+            <Navbar />
+            <Orders />
           </Route>
         </Switch>
       </div>

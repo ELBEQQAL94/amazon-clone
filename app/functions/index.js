@@ -18,21 +18,20 @@ app.get('/', (req, res) => {
 });
 
 app.post('/payments/create', async (req, res) => {
-  const total = req.query.total;
-  console.log('PAYEMENT TOTAL: ', total);
+  const {total} = req.query;
+  console.log("TOTAL: ", total);
   try {
     const paymentIntent = await stripe.paymentIntents.create({
       amount: total,
       currency: "usd",
     });
-
+   
     res.status(201).send({
       clientSecret: paymentIntent.client_secret,
     });
   } catch(error) {
     console.log('Error: ', error);
   }
-
 });
 
 // api endpoint

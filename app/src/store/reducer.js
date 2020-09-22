@@ -1,5 +1,10 @@
 // Actions Types
-import { ADD_TO_CART, REMOVE_FROM_CART, SET_USER } from './types';
+import { 
+  ADD_TO_CART, 
+  REMOVE_FROM_CART, 
+  SET_USER, 
+  EMPTY_CART 
+} from './types';
 
 export const initialState = {
   cart: [],
@@ -26,6 +31,11 @@ export default function reducer(state, action){
       return {
         ...state,
         cart: [...state.cart, action.item],
+      };
+    case EMPTY_CART:
+      return {
+        ...state,
+        cart: [],
       };
     case REMOVE_FROM_CART:
       let newCart = [...state.cart];
