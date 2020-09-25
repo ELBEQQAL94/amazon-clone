@@ -12,6 +12,9 @@ import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 // React Flip Move
 import FlipMove from 'react-flip-move';
 
+// firestore from firebase
+import {db} from '../../services/firebase';
+
 // Services
 import { instance } from '../../services';
 
@@ -57,7 +60,6 @@ const Payment = () => {
     getClientSecret();
   },[cart]);
 
-  console.log('payment component client secret: ', clientSecret);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -70,6 +72,19 @@ const Payment = () => {
       }
     }).then(({paymentIntent}) => {
       // paymentIntent = payment confirmation
+      // const users = db.collection('users');
+      // const userId = 
+      db
+        .collection('users')
+        .doc(user?.uid)
+        .collection('orders')
+        .doc(paymentIntent.id)
+        .set({
+          cart,
+          amount: paymentIntent.amount,
+          created: paymentIntent.created,
+        });
+
       setSucceeded(true);
       setError(null);
       setProcessing(false);

@@ -1,7 +1,7 @@
-## Amazon Clone
+## Amazon Clone (Firebase authentication + database) + stripe API.
 ----
 
-### TODO:
+### TODOS:
 ----
 
 * [x] Install react app
@@ -50,7 +50,21 @@
 * [ ] Clear console errors
 * [ ] Create middleware error function that handle the errors comes from server.
 * [ ] Prevent repeated products added to user cart
+* [ ] Make sure user logged in before make orders!
+* [ ] Clear console log 
+* [ ] Check reposnive for mobile screens
+* [ ] Re-name index files
+* [ ] Generate routes dynamicly
+* [ ] Remove Routes Component
+* [ ] Remove service functions from useEffect and push it to services seperate folder.
 
+## run application
+----
+* npm run start or yarn start
+
+## run firebase functions
+----
+* firebase emulators:start
 
 ## Deployement
 ----
