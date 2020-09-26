@@ -173,7 +173,10 @@ const Payment = () => {
                   thousandSeperator={true}
                   prefix={"$"}
                 />
-                <button disabled={processing || disabled || succeeded}>
+                <button 
+                  className="payment__button" 
+                  disabled={processing || disabled || succeeded}
+                >
                   <span>
                     {
                       processing ? <p>Processing...</p> : 'BUY NOW'

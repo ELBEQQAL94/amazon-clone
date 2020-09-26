@@ -22,6 +22,26 @@
     }
     .payment__address, .payment__details {
       flex: 0.8;
+      form {
+        max-width: 400px;
+        .paymentprice__container {
+          margin-top: 2em;
+          .payment__button {
+            width: 100%;
+            padding: 7px 15px;
+            outline: none;
+            border: 1px solid lightgray;
+            margin-top: 1em;
+            cursor: pointer;
+            transition: background-color 0.5s linear;
+            font-size: 1.2em;
+            &:hover {
+              background-color: lightpink;
+              color: white;
+            }
+          }
+        }
+      }
     }
   }
 }

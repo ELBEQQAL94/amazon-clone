@@ -45,7 +45,7 @@ const Links = ({user}) => {
       }
 
       <LinkItem
-        path="/payment"
+        path="/orders"
         optionOne="returns"
         optionTwo="& orders"
       />

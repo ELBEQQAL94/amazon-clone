@@ -57,7 +57,12 @@
 * [ ] Generate routes dynamicly
 * [ ] Remove Routes Component
 * [ ] Remove service functions from useEffect and push it to services seperate folder.
-
+* [ ] Styling payment form
+* [ ] Add loading when user waiting for orders or payment processing
+* [ ] If cart is empty prevent user to see checkout button
+* [ ] Deploy firebase functions:
+    * run: firebase deploy --only functions
+    
 ## run application
 ----
 * npm run start or yarn start

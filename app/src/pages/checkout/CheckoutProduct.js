@@ -24,6 +24,7 @@ const CheckoutProduct = forwardRef(({
   image,
   rating,
   price,
+  hideRemoveButton,
 }, ref) => {
 
   const [{cart}, dispatch] = useStateValue();
@@ -48,7 +49,7 @@ const CheckoutProduct = forwardRef(({
         <p>{title}</p>
         <Stars rating={rating}/>
         <Price price={price} />
-        <Button Icon={DeleteIcon} title="Remove from Cart" func={removeFromCart}/>
+        {!hideRemoveButton && <Button Icon={DeleteIcon} title="Remove from Cart" func={removeFromCart}/>}
       </div>
     </div>
   )
@@ -60,6 +61,7 @@ CheckoutProduct.propTypes = {
   image: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
   price: PropTypes.number.isRequired,
+  hideRemoveButton: PropTypes.bool.isRequired,
 };
 
 export default CheckoutProduct;
