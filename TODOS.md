@@ -62,7 +62,10 @@
 * [ ] If cart is empty prevent user to see checkout button
 * [ ] Deploy firebase functions:
     * run: firebase deploy --only functions
-    
+## Back End
+----
+
+* [ ] Add functions using express.js and deploy it on heroku.
 ## run application
 ----
 * npm run start or yarn start
